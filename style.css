@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== LOGIN ===== */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+}
+
+.login-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.login-container button {
+  background: #0984e3;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background: #74b9ff;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: gray;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header full width dengan animasi */
+.header {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white;
+  text-align: center;
+  padding: 70px 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animasi muncul lembut */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header input {
+  width: 70%;
+  max-width: 650px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  outline: none;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.header input:focus {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.8);
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8em;
+  }
+  .header input {
+    width: 85%;
+  }
+}
+
+.search-box input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  width: 250px;
+}
+
+/* Daftar Buku */
+.book-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+  gap: 25px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-card h3 {
+  margin-top: 10px;
+  color: #007bff;
+  font-size: 1.1em;
+}
+
+.book-card .author {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+/* ===== DETAIL ===== */
+.detail-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 100px auto 50px; /* diberi jarak dari atas agar tombol tidak menutupi */
+  background-color: #fff;
+  border: 1px solid #ddd;   /* hanya 1 border */
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.detail-container img {
+  width: 70%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.detail-container h2 {
+  margin: 15px 0;
+  color: #0984e3;
+}
+
+.detail-container p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.detail-book img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 14px;
+  display: block;
+  margin: 80px auto 20px; /* beri jarak agar tidak tertutup tombol */
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #0984e3;
+  font-weight: bold;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+/* DETAIL */
+
+.detail-container img {
+  width: 70%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.book-info h2 {
+  color: #007bff;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.book-info h4 {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.book-info p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+/* ============================= */
+/* Detail Buku Page */
+/* ============================= */
+.detail-page {
+  background-color: #f4f6f9;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.back-btn {
+  position: fixed;          /* agar selalu terlihat */
+  top: 20px;                /* jarak dari atas */
+  left: 20px;               /* jarak dari kiri */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;            /* biar di atas elemen lain */
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+.detail-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.detail-image {
+  width: 60%;
+  max-width: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: none; /* pastikan tidak ada border tambahan */
+}
+
+.detail-info {
+  text-align: center;
+}
+
+.detail-info h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+  color: #333;
+}
+
+.detail-info .author {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.detail-info p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.detail-info .description {
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  font-size: 1em;
+  padding: 0 20px;
+}
+
+/* tambahan */
+body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin-bottom: 15px;
+}
+
+.header input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-card h3 {
+  color: #333;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.book-card .author {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* PINJAM */
+.borrow-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.borrow-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Ringkasan buku rata kiri */
+.detail-info .desc {
+  text-align: left;
+  line-height: 1.7;
+  margin-top: 10px;
+  color: #333;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bookDesc {
+  text-align: left;
+  line-height: 1.8;
+  color: #333;
+  margin-top: 10px;
+}
+
+#bookDesc p {
+  margin-bottom: 15px;
+  text-indent: 30px; /* efek paragraf menjorok */
+}

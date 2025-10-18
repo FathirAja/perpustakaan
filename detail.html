@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Buku</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Tombol Kembali -->
+  <button class="back-btn" onclick="history.back()">⬅ Kembali</button>
+
+  <!-- Kontainer Detail Buku -->
+  <div class="detail-container">
+    <img id="bookImage" src="" alt="Cover Buku" class="detail-image" />
+    <div class="detail-info">
+      <h2 id="bookTitle"></h2>
+      <p class="author" id="bookAuthor"></p>
+      <p id="bookDesc" class="desc"></p>
+     <button class="borrow-btn" onclick="pinjamBuku()">Pinjam Buku</button>
+    </div>
+  </div>
+
+  <script>
+    // Ambil parameter dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById("bookTitle").innerText = urlParams.get("judul");
+    document.getElementById("bookImage").src = urlParams.get("img");
+    document.getElementById("bookAuthor").innerText = urlParams.get("penulis");
+    document.getElementById("bookDesc").innerText = urlParams.get("ringkasan");
+    document.getElementById("bookDesc").textContent = ringkasan;
+
+    // Ambil parameter dari URL
+    const ringkasan = decodeURIComponent(urlParams.get("ringkasan"));
+
+    // Tampilkan ringkasan dengan paragraf baru otomatis
+    const descContainer = document.getElementById("bookDesc");
+    const paragraf = ringkasan.split("\n\n"); // pisahkan berdasarkan dua kali enter
+    descContainer.innerHTML = paragraf.map(p => `<p>${p}</p>`).join("");
+
+    // Fungsi pinjam buku
+    function pinjamBuku() {
+      const judul = urlParams.get("judul");
+      alert("Kamu meminjam buku: " + judul);
+    }
+  </script>
+
+</body>
+</html>
