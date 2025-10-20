@@ -507,3 +507,11 @@ body {
   text-indent: 30px; /* efek paragraf menjorok */
 }
 
+.book-card a {
+  text-decoration: none;
+  color: inherit; /* biar warna teks tetap sama seperti aslinya */
+}
+
+.book-card a:hover {
+  text-decoration: none; /* pastikan saat hover juga tidak muncul underline */
+}
