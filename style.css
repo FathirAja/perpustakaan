@@ -515,3 +515,11 @@ body {
 .book-card a:hover {
   text-decoration: none; /* pastikan saat hover juga tidak muncul underline */
 }
+
+.copyright {
+  margin-top: 10px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: #777;
+}
