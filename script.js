@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
-      if (user === "erusan" && pass === "fathirganteng") {
+      if (user === "erusan" && pass === "031107") {
         window.location.href = "home.html";
       } else {
         alert("Username atau password salah!");
