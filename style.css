@@ -523,3 +523,11 @@ body {
   font-size: 0.8em;
   color: #777;
 }
+
+.copyright {
+  margin-top: 10px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: #777;
+}
