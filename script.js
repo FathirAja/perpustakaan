@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   if (form) {
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function searchBooks() {
   const searchValue = document.getElementById("search").value.toLowerCase();
   const books = document.querySelectorAll(".book-card");
-  books.forEach(book => {
+  books.forEach((book) => {
     const title = book.querySelector("h3").textContent.toLowerCase();
     book.style.display = title.includes(searchValue) ? "block" : "none";
   });

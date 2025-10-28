@@ -43,6 +43,9 @@
     function pinjamBuku() {
       const judul = urlParams.get("judul");
       alert("Kamu meminjam buku: " + judul);
+      if (judul) {
+      window.location.href = "home.html"; // kembali ke halaman home
+    }
     }
   </script>
 
