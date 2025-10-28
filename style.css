@@ -1,3 +1,11 @@
+:root {
+  --matcha-light: #dfe8d3;
+  --matcha: #b5c99a;
+  --matcha-dark: #8fa876;
+  --text-dark: #2e2e2e;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -18,7 +26,7 @@
   background: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   width: 300px;
   text-align: center;
 }
@@ -72,10 +80,14 @@ body {
   align-items: center;
 }
 
-/* Header full width dengan animasi */
-.header {
-  background: linear-gradient(135deg, #007bff, #00bfff);
-  color: white;
+/* === HEADER NATURAL LEMBUT (FULL WIDTH) === */
+header {
+  width: 100vw; /* full layar */
+  margin: 0;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #c8d9b9, #a8cba1);
+  color: #2b4b36;
   text-align: center;
   padding: 70px 20px;
   border-radius: 0 0 40px 40px;
@@ -120,8 +132,8 @@ header h1 {
 
 /* Logo */
 header img {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Kotak pencarian */
@@ -336,10 +348,10 @@ header img {
 }
 
 .back-btn {
-  position: fixed;          /* agar selalu terlihat */
-  top: 20px;                /* jarak dari atas */
-  left: 20px;               /* jarak dari kiri */
-  background-color: #007bff;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--matcha);
   color: white;
   border: none;
   padding: 10px 14px;
@@ -555,29 +567,4 @@ body {
   padding-left: 15px;
   letter-spacing: 0.5px;
   animation: fadeIn 1s ease;
-}
-
-.book-card a {
-  text-decoration: none;
-  color: inherit; /* biar warna teks tetap sama seperti aslinya */
-}
-
-.book-card a:hover {
-  text-decoration: none; /* pastikan saat hover juga tidak muncul underline */
-}
-
-.copyright {
-  margin-top: 10px;
-  border-top: 1px solid #333;
-  padding-top: 10px;
-  font-size: 0.8em;
-  color: #777;
-}
-
-.copyright {
-  margin-top: 10px;
-  border-top: 1px solid #333;
-  padding-top: 10px;
-  font-size: 0.8em;
-  color: #777;
 }
