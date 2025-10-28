@@ -1,3 +1,11 @@
+:root {
+  --matcha-light: #dfe8d3;
+  --matcha: #b5c99a;
+  --matcha-dark: #8fa876;
+  --text-dark: #2e2e2e;
+  --white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -11,20 +19,21 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  background: linear-gradient(135deg, var(--matcha-light), var(--white));
 }
 
 .login-container {
   background: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   width: 300px;
   text-align: center;
 }
 
 .login-container h2 {
   margin-bottom: 20px;
+  color: var(--matcha-dark);
 }
 
 .login-container input {
@@ -35,9 +44,14 @@
   border-radius: 8px;
 }
 
+.login-container input:focus {
+  border-color: var(--matcha);
+  outline: none;
+}
+
 .login-container button {
-  background: #0984e3;
-  color: white;
+  background: var(--matcha);
+  color: var(--white);
   border: none;
   width: 100%;
   padding: 10px;
@@ -47,7 +61,7 @@
 }
 
 .login-container button:hover {
-  background: #74b9ff;
+  background: var(--matcha-dark);
 }
 
 .hint {
@@ -66,9 +80,9 @@ body {
   align-items: center;
 }
 
-/* Header full width dengan animasi */
+/* Header */
 .header {
-  background: linear-gradient(135deg, #007bff, #00bfff);
+  background: linear-gradient(135deg, var(--matcha), var(--matcha-dark));
   color: white;
   text-align: center;
   padding: 70px 0;
@@ -78,7 +92,7 @@ body {
   animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Animasi muncul lembut */
+/* Animasi */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -176,7 +190,7 @@ body {
 
 .book-card h3 {
   margin-top: 10px;
-  color: #007bff;
+  color: var(--matcha-dark);
   font-size: 1.1em;
 }
 
@@ -197,9 +211,9 @@ body {
 
 .detail-container {
   max-width: 800px;
-  margin: 100px auto 50px; /* diberi jarak dari atas agar tombol tidak menutupi */
+  margin: 100px auto 50px;
   background-color: #fff;
-  border: 1px solid #ddd;   /* hanya 1 border */
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 30px;
   display: flex;
@@ -235,7 +249,7 @@ body {
   object-position: center top;
   border-radius: 14px;
   display: block;
-  margin: 80px auto 20px; /* beri jarak agar tidak tertutup tombol */
+  margin: 80px auto 20px;
   box-shadow: 0 5px 12px rgba(0,0,0,0.1);
 }
 
@@ -268,8 +282,7 @@ body {
   background-color: #0056b3;
 }
 
-/* DETAIL */
-
+/* ===DETAIL=== */
 .detail-container img {
   width: 70%;
   max-width: 400px;
@@ -299,11 +312,9 @@ body {
   font-size: 1.05em;
 }
 
-/* ============================= */
-/* Detail Buku Page */
-/* ============================= */
+/* ===Detail Buku Page=== */
 .detail-page {
-  background-color: #f4f6f9;
+  background-color: var(--matcha-light);
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 40px 0;
@@ -314,10 +325,10 @@ body {
 }
 
 .back-btn {
-  position: fixed;          /* agar selalu terlihat */
-  top: 20px;                /* jarak dari atas */
-  left: 20px;               /* jarak dari kiri */
-  background-color: #007bff;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--matcha);
   color: white;
   border: none;
   padding: 10px 14px;
@@ -325,11 +336,11 @@ body {
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;            /* biar di atas elemen lain */
+  z-index: 1000;
 }
 
 .back-btn:hover {
-  background-color: #0056b3;
+  background-color: var(--matcha-dark);
 }
 
 .detail-card {
@@ -350,7 +361,7 @@ body {
   border-radius: 8px;
   object-fit: cover;
   margin-bottom: 20px;
-  border: none; /* pastikan tidak ada border tambahan */
+  border: none;
 }
 
 .detail-info {
@@ -360,7 +371,7 @@ body {
 .detail-info h2 {
   margin-bottom: 8px;
   font-size: 28px;
-  color: #333;
+  color: var(--matcha-dark);
 }
 
 .detail-info .author {
@@ -382,7 +393,7 @@ body {
   padding: 0 20px;
 }
 
-/* tambahan */
+/* duwa */
 body {
   background-color: #ffffff;
   font-family: "Poppins", sans-serif;
@@ -456,7 +467,7 @@ body {
 
 /* PINJAM */
 .borrow-btn {
-  background-color: #007bff;
+  background-color: var(--matcha);
   color: white;
   border: none;
   padding: 10px 18px;
@@ -467,10 +478,10 @@ body {
 }
 
 .borrow-btn:hover {
-  background-color: #0056b3;
+  background-color: var(--matcha-dark);
 }
 
-/* Ringkasan buku rata kiri */
+/* === */
 .detail-info .desc {
   text-align: left;
   line-height: 1.7;
@@ -490,5 +501,33 @@ body {
 
 #bookDesc p {
   margin-bottom: 15px;
-  text-indent: 30px; /* efek paragraf menjorok */
+  text-indent: 30px;
+}
+
+.book-card h3 a {
+  color: var(--matcha-dark);
+  text-decoration: none;
+}
+
+.book-card .author a {
+  color: #555;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.book-card a {
+  text-decoration: none;
+  color: inherit; /* biar warna teks tetap sama seperti aslinya */
+}
+
+.book-card a:hover {
+  text-decoration: none; /* pastikan saat hover juga tidak muncul underline */
+}
+
+.copyright {
+  margin-top: 10px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: #777;
 }
