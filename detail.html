@@ -17,7 +17,7 @@
         <h2 id="bookTitle"></h2>
         <p class="author" id="bookAuthor"></p>
         <p id="bookDesc" class="desc"></p>
-        <button class="borrow-btn" onclick="pinjamBuku()">Pinjam Buku</button>
+        <button class="borrow-btn" onclick="openPopup()">Pinjam Buku</button>
       </div>
     </div>
 
@@ -40,14 +40,34 @@
       const paragraf = ringkasan.split("\n\n"); // pisahkan berdasarkan dua kali enter
       descContainer.innerHTML = paragraf.map((p) => `<p>${p}</p>`).join("");
 
-      // Fungsi pinjam buku
-      function pinjamBuku() {
+      function openPopup() {
+        const urlParams = new URLSearchParams(window.location.search);
         const judul = urlParams.get("judul");
-        alert("Kamu meminjam buku: " + judul);
-        if (judul) {
-          window.location.href = "home.html"; // kembali ke halaman home
-        }
+
+        document.getElementById(
+          "popupText"
+        ).textContent = `Kamu meminjam buku: ${judul}`;
+
+        document.getElementById("popup").classList.add("show");
+      }
+
+      function closePopup() {
+        document.getElementById("popup").classList.remove("show");
+
+        // Tunggu animasi hilang 300ms lalu kembali ke home
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 300);
       }
     </script>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup-overlay">
+      <div class="popup-box">
+        <h3>Berhasil!</h3>
+        <p id="popupText"></p>
+        <button class="close-btn" onclick="closePopup()">Tutup</button>
+      </div>
+    </div>
   </body>
 </html>
